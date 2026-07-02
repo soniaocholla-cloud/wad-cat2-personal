@@ -51,7 +51,7 @@ menuItems.forEach(function (item) {
 
 });
 
-//build Your Order
+//build Your order
 
 let orderInput = document.querySelector("#orderInput");
 let addOrderButton = document.querySelector("#orderForm button");
@@ -93,5 +93,36 @@ addOrderButton.addEventListener("click", function(event){
         alert("Please type an item.");
 
     }
+
+});
+
+//form handling and validation
+
+let feedbackForm = document.querySelector("form");
+let feedbackOutput = document.querySelector("#feedbackOutput");
+
+feedbackForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    let nameInput = document.querySelector("#name");
+    let reviewInput = document.querySelector("#review");
+
+    let name = nameInput.value;
+    let review = reviewInput.value;
+
+    if(name != "" && review != ""){
+
+        feedbackOutput.textContent = "Thank you " + name + ", your review has been submitted!";
+
+    } else {
+
+        feedbackOutput.textContent = "Please fill in all fields!";
+
+    }
+
+    // clear inputs
+    nameInput.value = "";
+    reviewInput.value = "";
 
 });

@@ -1,0 +1,236 @@
+:root {
+    --bg: #F5EFE0;
+    --surface: #FDFAF4;
+    --brown: #6B3F1F;
+    --gold: #C9A84C;
+    --text: #2C2C2C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+header {
+    background-color: var(--brown);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Bodoni Moda', Georgia, serif;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--gold);
+    color: var(--brown);
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: var(--surface);
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Bodoni Moda', Georgia, serif;
+    color: var(--brown);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--brown);
+    margin: 1rem 0;
+      font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+
+
+#home {
+    text-align: center;
+}
+
+#home img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+
+
+.about-image {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+
+#features ol {
+    padding-left: 2rem;
+}
+
+#features li {
+    margin-bottom: 1rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.menu-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    width: 100%;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+#reviews form {
+    max-width: 600px;
+    margin: auto;
+}
+
+#reviews input[type="text"],
+#reviews textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#reviews button {
+    background-color: var(--brown);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#reviews button:hover {
+    background-color: var(--gold);
+    color: var(--brown);
+}
+
+
+
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact a {
+    color: var(--brown);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: var(--gold);
+}
+
+
+@media screen and (max-width:768px) {
+
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer p {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+footer {
+    background-color: var(--brown);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+

@@ -98,7 +98,7 @@ addOrderButton.addEventListener("click", function(event){
 
 //form handling and validation
 
-let feedbackForm = document.querySelector("form");
+let feedbackForm = document.querySelector("#feedbackForm");
 let feedbackOutput = document.querySelector("#feedbackOutput");
 
 feedbackForm.addEventListener("submit", function(event){

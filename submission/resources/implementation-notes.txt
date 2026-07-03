@@ -1,0 +1,24 @@
+Implementation Notes
+
+1. Dynamic Menu
+- Menu items are stored in a JavaScript array of objects.
+- They are displayed using forEach(), createElement(), and appendChild().
+
+2. Build Your Order
+- Users can add menu items dynamically.
+- Each item has a Delete button that removes it using remove().
+
+3. Customer Feedback Form
+- The form uses preventDefault().
+- Input values are validated.
+- Feedback is displayed using textContent.
+
+4. Local Storage
+- The user's name is saved using localStorage.
+- The name is automatically restored when the page reloads.
+
+5. Click-to-Reveal Banner
+- Clicking the banner reveals or hides a welcome message using classList.toggle().
+
+Extra Feature
+- A live character counter updates as the user types a review.

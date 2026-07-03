@@ -126,3 +126,49 @@ feedbackForm.addEventListener("submit", function(event){
     reviewInput.value = "";
 
 });
+
+//local storage for name input
+
+let nameInput = document.querySelector("#name");
+
+//load saved name when page opens
+window.addEventListener("load", function(){
+
+    let savedName = localStorage.getItem("username");
+
+    if(savedName){
+
+        nameInput.value = savedName;
+
+    }
+
+});
+
+//save name when typing
+nameInput.addEventListener("input", function(){
+
+    localStorage.setItem("username", nameInput.value);
+
+});
+
+//banner click event 
+
+let banner = document.querySelector("#bannerContainer");
+let bannerText = document.querySelector("#bannerText");
+
+if (banner && bannerText) {
+    banner.addEventListener("click", function () {
+        bannerText.classList.toggle("hidden");
+    });
+}
+
+let reviewBox = document.querySelector("#review");
+
+let characterCount = document.querySelector("#characterCount");
+
+if (reviewBox && characterCount) {
+    reviewBox.addEventListener("input", function () {
+        characterCount.textContent =
+            reviewBox.value.length + " / 200 characters";
+    });
+}

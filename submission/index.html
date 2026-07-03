@@ -47,7 +47,16 @@
 
     <main>
         <section id="home">
-            <img src="images/banner.jpeg" alt="Exterior view of Layali Café">
+            <div id="bannerContainer">
+
+                <img id="banner" src="images/banner.jpeg" alt="Exterior view of Layali Café">
+
+                <p id="bannerText" class="hidden">
+                    Welcome to Layali Café ☕ — your cozy neighbourhood escape.
+                </p>
+
+            </div>
+
             <p><b>A little corner of warmth in Magharibi</b></p>
             <p>Nestled along Mai Mahiu Road at Magharibi Place, Layali is more than a café, it's your neighbourhood
                 escape. Whether you're a student grabbing a quick bite between classes or just looking for a cozy spot
@@ -100,19 +109,21 @@
 
         </section>
 
-        <h3>Build Your Order</h3>
+        <section class="order-section">
 
-        <form id="orderForm">
+            <h3>Build Your Order</h3>
 
-            <input type="text" id="orderInput" placeholder="Add an item">
+            <form id="orderForm">
 
-            <button>Add</button>
+                <input type="text" id="orderInput" placeholder="What would you like to add?">
 
-        </form>
+                <button type="submit">Add</button>
 
-        <ul id="orderItems">
+            </form>
 
-        </ul>
+            <ul id="orderItems"></ul>
+
+        </section>
 
         <section class="gallery" id="gallery">
             <div class="section-header">
@@ -193,7 +204,9 @@
                 <textarea id="review" name="review" rows="5"
                     placeholder="Tell us about your experience at Layali Café..."></textarea>
 
-                <br><br>
+                <p id="characterCount">
+                    0 / 200 characters
+                </p>
 
                 <button type="submit">Submit Review</button>
                 <p id="feedbackOutput"></p>
